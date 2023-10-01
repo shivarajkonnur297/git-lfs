@@ -11,7 +11,7 @@ jobs:
       matrix:
         go: ['1.20.x']
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
@@ -75,7 +75,7 @@ jobs:
       matrix:
         go: ['1.20.x']
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
@@ -114,7 +114,7 @@ jobs:
       matrix:
         go: ['1.20.x']
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
@@ -145,7 +145,7 @@ jobs:
     name: Build Linux Packages
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
@@ -166,7 +166,7 @@ jobs:
         arch: [arm64]
         container: [debian_11]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
